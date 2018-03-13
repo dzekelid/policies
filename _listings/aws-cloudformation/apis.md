@@ -23,7 +23,7 @@ apis:
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/policies/master/_listings/aws-cloudformation/action-getstackpolicy-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery/policies/master/_listings/aws-cloudformation/action-setstackpolicy-get.md
 x-common:
 - type: x-command-line-interface
   url: http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html
