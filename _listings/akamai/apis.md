@@ -33,7 +33,7 @@ apis:
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/policies/master/_listings/akamai/cloudlets-api-v2-policies-policyid-put.md
+    url: https://raw.githubusercontent.com/streamdata-gallery/policies/master/_listings/akamai/cloudlets-api-v2-policies-policyid-delete.md
 x-common:
 - type: x-base
   url: https://api.ccu.akamai.com
