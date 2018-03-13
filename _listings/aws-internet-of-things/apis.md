@@ -32,7 +32,7 @@ apis:
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/policies/master/_listings/aws-internet-of-things/action-getpolicy-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery/policies/master/_listings/aws-internet-of-things/action-getpolicyversion-get.md
 x-common:
 - type: x-blog
   url: https://aws.amazon.com/iot-platform/developer-resources/#Blog
