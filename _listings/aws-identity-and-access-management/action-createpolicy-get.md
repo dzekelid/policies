@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=CreatePolicy&k=1:
+  /?Action=CreatePolicy:
     get:
       summary: ' Create Policy '
       description: Creates a new managed policy for your AWS account
