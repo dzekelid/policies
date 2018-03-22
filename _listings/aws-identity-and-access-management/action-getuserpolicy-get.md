@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=GetUserPolicy&k=1:
+  /?Action=GetUserPolicy:
     get:
       summary: ' Get User Policy '
       description: |-
