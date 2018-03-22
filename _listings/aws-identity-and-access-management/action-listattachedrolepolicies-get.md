@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=ListAttachedRolePolicies&k=1:
+  /?Action=ListAttachedRolePolicies:
     get:
       summary: ' List Attached Role Policies '
       description: Lists all managed policies that are attached to the specified IAM
