@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DetachGroupPolicy&k=1:
+  /?Action=DetachGroupPolicy:
     get:
       summary: ' Detach Group Policy '
       description: Removes the specified managed policy from the specified IAM group
