@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DeleteRolePolicy&k=1:
+  /?Action=DeleteRolePolicy:
     get:
       summary: ' Delete Role Policy '
       description: |-
