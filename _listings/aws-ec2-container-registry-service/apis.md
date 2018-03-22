@@ -33,7 +33,7 @@ apis:
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-ec2-container-registry-service/action-deleterepositorypolicy-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-ec2-container-registry-service/action-getrepositorypolicy-get.md
 x-common:
 - type: x-documentation
   url: http://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html
