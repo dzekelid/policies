@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=SetStackPolicy&k=1:
+  /?Action=SetStackPolicy:
     get:
       summary: ' Set Stack Policy '
       description: Sets a stack policy for a specified stack
