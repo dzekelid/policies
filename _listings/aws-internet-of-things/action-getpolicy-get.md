@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=GetPolicy&k=1:
+  /?Action=GetPolicy:
     get:
       summary: ' Get Policy '
       description: Gets information about the specified policy with the policy document
