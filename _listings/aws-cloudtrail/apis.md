@@ -17,9 +17,9 @@ tags:
 - Logging
 - Analysis
 - Amazon Web Services
-created: "2018-03-13"
-modified: "2018-03-13"
-url: https://raw.githubusercontent.com/streamdata-gallery/policies/master/_listings/aws-cloudtrail/apis.yaml
+created: "2018-03-22"
+modified: "2018-03-22"
+url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-cloudtrail/apis.yaml
 specificationVersion: "0.14"
 apis:
 - name: AWS CloudTrail API
@@ -31,7 +31,7 @@ apis:
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/policies/master/_listings/aws-cloudtrail/action-listtags-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-cloudtrail/action-listtags-get.md
 x-common:
 - type: x-console
   url: https://console.aws.amazon.com/cloudtrail/home
