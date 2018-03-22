@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=AttachRolePolicy&k=1:
+  /?Action=AttachRolePolicy:
     get:
       summary: ' Attach Role Policy '
       description: Attaches the specified managed policy to the specified IAM role
