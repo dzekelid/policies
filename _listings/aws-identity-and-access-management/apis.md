@@ -30,7 +30,7 @@ apis:
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-identity-and-access-management/action-listgrouppolicies-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-identity-and-access-management/action-listpolicies-get.md
 x-common:
 - type: x-change-log
   url: http://developer.amazonwebservices.com/connect/kbcategory.jspa?categoryID=323
