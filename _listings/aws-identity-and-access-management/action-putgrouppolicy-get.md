@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=PutGroupPolicy&k=1:
+  /?Action=PutGroupPolicy:
     get:
       summary: ' Put Group Policy '
       description: |-
