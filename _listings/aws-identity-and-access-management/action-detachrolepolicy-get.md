@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DetachRolePolicy&k=1:
+  /?Action=DetachRolePolicy:
     get:
       summary: ' Detach Role Policy '
       description: Removes the specified managed policy from the specified role
