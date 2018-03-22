@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DescribeSSLPolicies&k=1:
+  /?Action=DescribeSSLPolicies:
     get:
       summary: ' Describe S S L Policies '
       description: Describes the specified policies or all policies used for SSL negotiation
