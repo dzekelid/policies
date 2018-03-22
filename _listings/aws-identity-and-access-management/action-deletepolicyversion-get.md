@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DeletePolicyVersion&k=1:
+  /?Action=DeletePolicyVersion:
     get:
       summary: ' Delete Policy Version '
       description: Deletes the specified version from the specified managed policy
