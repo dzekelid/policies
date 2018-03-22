@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=ListAttachedUserPolicies&k=1:
+  /?Action=ListAttachedUserPolicies:
     get:
       summary: ' List Attached User Policies '
       description: Lists all managed policies that are attached to the specified IAM
