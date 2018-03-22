@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=ListPolicies&k=1:
+  /?Action=ListPolicies:
     get:
       summary: ' List Policies '
       description: Lists your policies
