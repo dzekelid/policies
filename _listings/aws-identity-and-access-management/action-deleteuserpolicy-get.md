@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DeleteUserPolicy&k=1:
+  /?Action=DeleteUserPolicy:
     get:
       summary: ' Delete User Policy '
       description: |-
