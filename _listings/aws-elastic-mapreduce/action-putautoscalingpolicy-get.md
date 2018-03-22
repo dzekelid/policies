@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=PutAutoScalingPolicy&k=1:
+  /?Action=PutAutoScalingPolicy:
     get:
       summary: ' Put Auto Scaling Policy '
       description: Creates or updates an automatic scaling policy for a core instance
