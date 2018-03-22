@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=ListEntitiesForPolicy&k=1:
+  /?Action=ListEntitiesForPolicy:
     get:
       summary: ' List Entities For Policy '
       description: |-
