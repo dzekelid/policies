@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=CreatePolicyVersion&k=1:
+  /?Action=CreatePolicyVersion:
     get:
       summary: ' Create Policy Version '
       description: Creates a new version of the specified managed policy
