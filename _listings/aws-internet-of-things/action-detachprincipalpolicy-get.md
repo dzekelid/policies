@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DetachPrincipalPolicy&k=1:
+  /?Action=DetachPrincipalPolicy:
     get:
       summary: ' Detach Principal Policy '
       description: Removes the specified policy from the specified certificate
