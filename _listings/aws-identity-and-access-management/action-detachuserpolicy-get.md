@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DetachUserPolicy&k=1:
+  /?Action=DetachUserPolicy:
     get:
       summary: ' Detach User Policy '
       description: Removes the specified managed policy from the specified user
