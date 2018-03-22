@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DeleteGroupPolicy&k=1:
+  /?Action=DeleteGroupPolicy:
     get:
       summary: ' Delete Group Policy '
       description: |-
