@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=AttachGroupPolicy&k=1:
+  /?Action=AttachGroupPolicy:
     get:
       summary: ' Attach Group Policy '
       description: Attaches the specified managed policy to the specified IAM group
