@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DescribePolicies&k=1:
+  /?Action=DescribePolicies:
     get:
       summary: ' Describe Policies '
       description: Describes the policies for the specified Auto Scaling group
