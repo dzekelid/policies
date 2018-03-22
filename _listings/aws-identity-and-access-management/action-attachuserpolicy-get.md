@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=AttachUserPolicy&k=1:
+  /?Action=AttachUserPolicy:
     get:
       summary: ' Attach User Policy '
       description: Attaches the specified managed policy to the specified user
