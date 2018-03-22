@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=AttachPrincipalPolicy&k=1:
+  /?Action=AttachPrincipalPolicy:
     get:
       summary: ' Attach Principal Policy '
       description: Attaches the specified policy to the specified principal (certificate
