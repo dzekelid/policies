@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=ListUserPolicies&k=1:
+  /?Action=ListUserPolicies:
     get:
       summary: ' List User Policies '
       description: Lists the names of the inline policies embedded in the specified
