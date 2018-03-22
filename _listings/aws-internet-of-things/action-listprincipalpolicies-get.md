@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=ListPrincipalPolicies&k=1:
+  /?Action=ListPrincipalPolicies:
     get:
       summary: ' List Principal Policies '
       description: Lists the policies attached to the specified principal
