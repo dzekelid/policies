@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DescribeTerminationPolicyTypes&k=1:
+  /?Action=DescribeTerminationPolicyTypes:
     get:
       summary: ' Describe Termination Policy Types '
       description: Describes the termination policies supported by Auto Scaling
