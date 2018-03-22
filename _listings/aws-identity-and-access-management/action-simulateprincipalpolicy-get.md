@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=SimulatePrincipalPolicy&k=1:
+  /?Action=SimulatePrincipalPolicy:
     get:
       summary: ' Simulate Principal Policy '
       description: |-
