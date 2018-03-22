@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DeleteAccountPasswordPolicy&k=1:
+  /?Action=DeleteAccountPasswordPolicy:
     get:
       summary: ' Delete Account Password Policy '
       description: Deletes the password policy for the AWS account
