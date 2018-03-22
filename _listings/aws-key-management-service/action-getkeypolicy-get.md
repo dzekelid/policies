@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=GetKeyPolicy&k=1:
+  /?Action=GetKeyPolicy:
     get:
       summary: ' Get Key Policy '
       description: Retrieves a policy attached to the specified key
