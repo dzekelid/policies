@@ -17,9 +17,9 @@ tags:
 - Database
 - Data
 - Amazon Web Services
-created: "2018-03-13"
-modified: "2018-03-13"
-url: https://raw.githubusercontent.com/streamdata-gallery/policies/master/_listings/aws-elastic-mapreduce/apis.yaml
+created: "2018-03-22"
+modified: "2018-03-22"
+url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-elastic-mapreduce/apis.yaml
 specificationVersion: "0.14"
 apis:
 - name: AWS Elastic MapReduce API
@@ -32,7 +32,7 @@ apis:
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/policies/master/_listings/aws-elastic-mapreduce/action-removeautoscalingpolicy-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-elastic-mapreduce/action-putautoscalingpolicy-get.md
 x-common:
 - type: x-article
   url: http://aws.amazon.com/articles/Elastic-MapReduce
