@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=PutRolePolicy&k=1:
+  /?Action=PutRolePolicy:
     get:
       summary: ' Put Role Policy '
       description: |-
