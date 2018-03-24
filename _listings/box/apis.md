@@ -33,7 +33,7 @@ apis:
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/box/retention-policies-policy-id-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/box/retention-policies-policy-id-put.md
 x-common:
 - type: x-base
   url: https://api.box.com/
