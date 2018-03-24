@@ -20,11 +20,20 @@ tags:
 - Bots
 - Applications
 - API LIfeycle
-created: "2018-03-22"
-modified: "2018-03-22"
+created: "2018-03-23"
+modified: "2018-03-23"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/akamai/apis.yaml
 specificationVersion: "0.14"
-apis: []
+apis:
+- name: Akamai API
+  description: Akamai Technologies, Inc
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Akamai_Technologies,_Inc._Logo.png
+  humanURL: ""
+  baseURL: https:///
+  tags: Policies
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/akamai/cloudlets-api-v2-policies-gid,includedeleted,cloudletid-get.md
 x-common:
 - type: x-base
   url: https://api.ccu.akamai.com
