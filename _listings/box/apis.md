@@ -33,7 +33,7 @@ apis:
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/box/legal-hold-policies-id-delete.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/box/legal-hold-policies-id-assignments-get.md
 x-common:
 - type: x-base
   url: https://api.box.com/
