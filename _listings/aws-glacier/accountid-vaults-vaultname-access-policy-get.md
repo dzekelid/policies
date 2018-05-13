@@ -1,8 +1,15 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Glacier API
+  title: Amazon Glacier API Get  Vault  Access  Policy
   version: 1.0.0
+  description: "DescriptionThis operation retrieves the access-policy subresource
+    set on the\n\t\t\tvault&#8212;for more information on setting this subresource,
+    see Set Vault Access Policy (PUT access-policy). If\n\t\t\tthere is no access
+    policy set on the vault, the operation returns a 404 Not\n\t\t\t\tfound error.
+    For more information about vault access policies, see Amazon Glacier Access Control
+    with Vault Access Policies.RequestsTo return the current vault access policy,
+    send an HTTP GET request to\n\t\t\tthe URI of the vault's access-policy subresource."
 schemes:
 - http
 produces:
