@@ -34,7 +34,26 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-ec2-container-registry-service/action-setrepositorypolicy-get.md
+- name: AWS EC2 Container Registry API Delete Repository Policy
+  description: Deletes the repository policy from a specified repository.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Compute_AmazonECR.png
+  humanURL: https://aws.amazon.com/ecr/
+  baseURL: http:://{host}//
+  tags: Policies
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-ec2-container-registry-service/action-deleterepositorypolicy-get.md
 x-common:
+- type: x-documentation
+  url: http://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html
+- type: x-faq
+  url: https://aws.amazon.com/ecr/faqs/
+- type: x-getting-started
+  url: https://aws.amazon.com/ecr/getting-started/
+- type: x-pricing
+  url: https://aws.amazon.com/ecr/pricing/
+- type: x-website
+  url: https://aws.amazon.com/ecr/
 - type: x-documentation
   url: http://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html
 - type: x-faq
