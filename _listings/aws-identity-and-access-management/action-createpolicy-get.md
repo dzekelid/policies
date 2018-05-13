@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Identity and Access Management API
+  title: AWS Identity and Access Management API Create Policy
   version: 1.0.0
+  description: Creates a new managed policy for your AWS account.
 schemes:
 - http
 produces:
