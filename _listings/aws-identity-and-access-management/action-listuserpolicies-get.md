@@ -1,8 +1,10 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Identity and Access Management API
+  title: AWS Identity and Access Management API List User Policies
   version: 1.0.0
+  description: Lists the names of the inline policies embedded in the specified IAM
+    user.
 schemes:
 - http
 produces:
