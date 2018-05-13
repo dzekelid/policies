@@ -1,8 +1,10 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Internet of Things API
+  title: AWS Internet of Things API Attach Principal Policy
   version: 1.0.0
+  description: Attaches the specified policy to the specified principal (certificate
+    or other credential).
 schemes:
 - http
 produces:
