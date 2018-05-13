@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS CloudTrail API
+  title: AWS CloudTrail API List Tags
   version: 1.0.0
+  description: Lists the tags for the trail in the current region.
 schemes:
 - http
 produces:
