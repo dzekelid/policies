@@ -1,8 +1,25 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Route 53 API
+  title: AWS Route 53 API List Traffic Policy Versions
   version: 1.0.0
+  description: 'Gets information about all of the versions for a specified traffic
+    policy.Send a GET request to the /Amazon Route 53 APIversion/trafficpolicy resource
+    and specify the ID of the traffic policyfor which you want to list versions.Amazon
+    Route 53 returns a maximum of 100 items in each response. If you have a lot of
+    trafficpolicies, you can use the maxitems parameter to list them in groups of
+    up to100.The response includes three values that help you navigate from one group
+    ofmaxitems traffic policies to the next:             IsTruncated           If
+    the value of IsTruncated in the response is true,there are more traffic policy
+    versions associated with the specified trafficpolicy.If IsTruncated is false,
+    this response includes the lasttraffic policy version that is associated with
+    the specified traffic policy.             TrafficPolicyVersionMarker           The
+    ID of the next traffic policy version that is associated with the current AWSaccount.
+    If you want to list more traffic policies, make another call toListTrafficPolicyVersions,
+    and specify the value of theTrafficPolicyVersionMarker element in theTrafficPolicyVersionMarker
+    request parameter.If IsTruncated is false, Amazon Route 53 omits theTrafficPolicyVersionMarker
+    element from the response.             MaxItems           The value that you specified
+    for the MaxItems parameter in the requestthat produced the current response.'
 schemes:
 - http
 produces:
