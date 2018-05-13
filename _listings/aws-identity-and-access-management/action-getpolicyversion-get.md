@@ -1,8 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Identity and Access Management API
+  title: AWS Identity and Access Management API Get Policy Version
   version: 1.0.0
+  description: |-
+    Retrieves information about the specified version of the specified managed policy,
+          including the policy document.
 schemes:
 - http
 produces:
