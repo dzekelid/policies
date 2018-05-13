@@ -31,17 +31,17 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-identity-and-access-management/action-simulateprincipalpolicy-get.md
-- name: AWS Identity and Access Management API Simulate Custom Policy
+- name: AWS Identity and Access Management API Simulate Principal Policy
   description: |-
-    Simulate how a set of IAM policies and optionally a resource-based policy works with
-          a list of API actions and AWS resources to determine the policies' effective permissions.
+    Simulate how a set of IAM policies attached to an IAM entity works with a list of
+          API actions and AWS resources to determine the policies' effective permissions.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Security-Identity_AWSIAM.png
   humanURL: https://aws.amazon.com/iam/
   baseURL: http:://{host}//
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-identity-and-access-management/action-simulatecustompolicy-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-identity-and-access-management/action-simulateprincipalpolicy-get.md
 x-common:
 - type: x-change-log
   url: http://developer.amazonwebservices.com/connect/kbcategory.jspa?categoryID=323
