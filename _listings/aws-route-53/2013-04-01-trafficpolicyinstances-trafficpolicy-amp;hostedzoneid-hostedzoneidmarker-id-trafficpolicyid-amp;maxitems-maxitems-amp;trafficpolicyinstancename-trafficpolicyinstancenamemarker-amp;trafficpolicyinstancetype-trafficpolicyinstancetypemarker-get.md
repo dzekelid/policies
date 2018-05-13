@@ -1,8 +1,30 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Route 53 API
+  title: AWS Route 53 API List Traffic Policy Instances By Policy
   version: 1.0.0
+  description: 'Gets information about the traffic policy instances that you created
+    by using a specifytraffic policy version.NoteAfter you submit a CreateTrafficPolicyInstance
+    or anUpdateTrafficPolicyInstance request, there''s a brief delay while Amazon
+    Route 53creates the resource record sets that are specified in the traffic policy
+    definition. Formore information, see the State response element.Send a GET request
+    to the /Route 53 APIversion/trafficpolicyinstance resource and include the ID
+    and version ofthe traffic policy.Amazon Route 53 returns a maximum of 100 items
+    in each response. If you have a lot of trafficpolicy instances, you can use the
+    MaxItems parameter to list them in groups of upto 100.The response includes five
+    values that help you navigate from one group ofMaxItems traffic policy instances
+    to the next:             IsTruncated               If the value of IsTruncated
+    in the response is true,there are more traffic policy instances associated with
+    the specified trafficpolicy.If IsTruncated is false, this response includes the
+    lasttraffic policy instance that is associated with the specified traffic policy.             MaxItems               The
+    value that you specified for the MaxItems parameter in the requestthat produced
+    the current response.                  HostedZoneIdMarker, TrafficPolicyInstanceNameMarker,
+    and TrafficPolicyInstanceTypeMarker               If IsTruncated is true, these
+    values in the responserepresent the first traffic policy instance in the next
+    group of MaxItemstraffic policy instances. To list more traffic policy instances,
+    make another call toListTrafficPolicyInstancesByPolicy, and specify these values
+    in thecorresponding request parameters.If IsTruncated is false, all three elements
+    are omittedfrom the response.'
 schemes:
 - http
 produces:
