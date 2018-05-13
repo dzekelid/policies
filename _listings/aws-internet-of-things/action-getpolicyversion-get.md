@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Internet of Things API
+  title: AWS Internet of Things API Get Policy Version
   version: 1.0.0
+  description: Gets information about the specified policy version.
 schemes:
 - http
 produces:
