@@ -31,17 +31,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-identity-and-access-management/action-simulateprincipalpolicy-get.md
-- name: AWS Identity and Access Management API Delete User Policy
-  description: |-
-    Deletes the specified inline policy that is embedded in the specified IAM
-          user.
+- name: AWS Identity and Access Management API Detach Group Policy
+  description: Removes the specified managed policy from the specified IAM group.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Security-Identity_AWSIAM.png
   humanURL: https://aws.amazon.com/iam/
   baseURL: http:://{host}//
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-identity-and-access-management/action-deleteuserpolicy-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-identity-and-access-management/action-detachgrouppolicy-get.md
 x-common:
 - type: x-change-log
   url: http://developer.amazonwebservices.com/connect/kbcategory.jspa?categoryID=323
