@@ -28,21 +28,20 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-glacier/accountid-vaults-vaultname-access-policy-put.md
-- name: Amazon Glacier API Get  Vault  Access  Policy
-  description: "DescriptionThis operation retrieves the access-policy subresource
-    set on the\n\t\t\tvault&#8212;for more information on setting this subresource,
-    see Set Vault Access Policy (PUT access-policy). If\n\t\t\tthere is no access
-    policy set on the vault, the operation returns a 404 Not\n\t\t\t\tfound error.
-    For more information about vault access policies, see Amazon Glacier Access Control
-    with Vault Access Policies.RequestsTo return the current vault access policy,
-    send an HTTP GET request to\n\t\t\tthe URI of the vault's access-policy subresource."
+- name: Amazon Glacier API Set  Vault  Access  Policy
+  description: "DescriptionThis operation configures an access policy for a vault
+    and will overwrite an existing\n\t\t\tpolicy. To configure a vault access policy,
+    send a PUT request to the\n\t\t\t\taccess-policy subresource of the vault. You
+    can set one access policy per vault\n\t\t\tand the policy can be up to 20 KB in
+    size. For more information about vault access\n\t\t\tpolicies, see Amazon Glacier
+    Access Control with Vault Access Policies. Requests"
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Storage-Content-Delivery_AmazonGlacier.png
   humanURL: https://aws.amazon.com/glacier/
   baseURL: http:://{host}//
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-glacier/accountid-vaults-vaultname-access-policy-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-glacier/accountid-vaults-vaultname-access-policy-put.md
 x-common:
 - type: x-change-log
   url: http://aws.amazon.com/releasenotes/Amazon-Glacier/
