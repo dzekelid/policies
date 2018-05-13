@@ -1,8 +1,13 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Glacier API
+  title: Amazon Glacier API Get  Data  Retrieval  Policy
   version: 1.0.0
+  description: "DescriptionThis operation returns the current data retrieval policy
+    for the account and region specified in the\n\t\t\t\tGET request. For more information
+    about data retrieval policies, see\n\t\t\tAmazon Glacier Data Retrieval Policies.RequestsTo
+    return the current data retrieval policy, send an HTTP GET request to the data
+    retrieval\n\t\t\tpolicy URI as shown in the following syntax example."
 schemes:
 - http
 produces:
