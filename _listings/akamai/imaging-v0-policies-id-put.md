@@ -1,8 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  title: Akamai Merged API
+  title: Akamai API Add or Modify a Policy
+  description: Add or Modify a Policy
   version: 1.0.0
+host: developer.akamai.com
+basePath: /
 schemes:
 - http
 produces:
@@ -16,7 +19,7 @@ paths:
       description: Add or Modify a Policy
       operationId: imagingv0policiesid
       parameters:
-      - in: String
+      - in: query
         name: id
         description: Unique policy identifier
         type: string
