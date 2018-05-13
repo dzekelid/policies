@@ -33,16 +33,16 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-elastic-mapreduce/action-removeautoscalingpolicy-get.md
-- name: AWS Elastic MapReduce API Put Auto Scaling Policy
-  description: Creates or updates an automatic scaling policy for a core instance
-    group or task instance group in an Amazon EMR cluster.
+- name: AWS Elastic MapReduce API Remove Auto Scaling Policy
+  description: Removes an automatic scaling policy from a specified instance group
+    within an EMR cluster.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Analytics_AmazonEMR.png
   humanURL: https://aws.amazon.com/emr/
   baseURL: http:://{host}//
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-elastic-mapreduce/action-putautoscalingpolicy-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-elastic-mapreduce/action-removeautoscalingpolicy-get.md
 x-common:
 - type: x-article
   url: http://aws.amazon.com/articles/Elastic-MapReduce
