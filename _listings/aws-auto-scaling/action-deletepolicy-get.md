@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Auto Scaling API
+  title: AWS Auto Scaling API Delete Policy
   version: 1.0.0
+  description: Deletes the specified Auto Scaling policy.
 schemes:
 - http
 produces:
