@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Identity and Access Management API
+  title: AWS Identity and Access Management API List Attached Role Policies
   version: 1.0.0
+  description: Lists all managed policies that are attached to the specified IAM role.
 schemes:
 - http
 produces:
