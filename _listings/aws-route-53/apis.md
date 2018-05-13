@@ -92,7 +92,55 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-route-53/2013-04-01-trafficpolicyinstance-id-post.md
+- name: AWS Route 53 API List Traffic Policy Instances By Policy
+  description: 'Gets information about the traffic policy instances that you created
+    by using a specifytraffic policy version.NoteAfter you submit a CreateTrafficPolicyInstance
+    or anUpdateTrafficPolicyInstance request, there''s a brief delay while Amazon
+    Route 53creates the resource record sets that are specified in the traffic policy
+    definition. Formore information, see the State response element.Send a GET request
+    to the /Route 53 APIversion/trafficpolicyinstance resource and include the ID
+    and version ofthe traffic policy.Amazon Route 53 returns a maximum of 100 items
+    in each response. If you have a lot of trafficpolicy instances, you can use the
+    MaxItems parameter to list them in groups of upto 100.The response includes five
+    values that help you navigate from one group ofMaxItems traffic policy instances
+    to the next:             IsTruncated               If the value of IsTruncated
+    in the response is true,there are more traffic policy instances associated with
+    the specified trafficpolicy.If IsTruncated is false, this response includes the
+    lasttraffic policy instance that is associated with the specified traffic policy.             MaxItems               The
+    value that you specified for the MaxItems parameter in the requestthat produced
+    the current response.                  HostedZoneIdMarker, TrafficPolicyInstanceNameMarker,
+    and TrafficPolicyInstanceTypeMarker               If IsTruncated is true, these
+    values in the responserepresent the first traffic policy instance in the next
+    group of MaxItemstraffic policy instances. To list more traffic policy instances,
+    make another call toListTrafficPolicyInstancesByPolicy, and specify these values
+    in thecorresponding request parameters.If IsTruncated is false, all three elements
+    are omittedfrom the response.'
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Networking_AmazonRoute53.png
+  humanURL: https://aws.amazon.com/route53/
+  baseURL: http:://{host}//
+  tags: Policies
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-route-53/2013-04-01-trafficpolicyinstances-trafficpolicy-hostedzoneid-hostedzoneidmarker-id-trafficpolicyid-maxitems-maxitems-trafficpolicyinstancename-trafficpolicyinstancenamemarker-trafficpolicyinstancetype-trafficpolicyinstancetypemarker-get.md
 x-common:
+- type: x-documentation
+  url: http://docs.aws.amazon.com/Route53/latest/APIReference/
+- type: x-faq
+  url: https://aws.amazon.com/route53/faqs/
+- type: x-forum
+  url: https://forums.aws.amazon.com/forum.jspa?forumID=87
+- type: x-pricing
+  url: https://aws.amazon.com/route53/pricing/
+- type: x-registrar-policies
+  url: https://aws.amazon.com/route53/amazon-registrar-policies/
+- type: x-service-health
+  url: http://status.aws.amazon.com/
+- type: x-service-level-agreement
+  url: https://aws.amazon.com/route53/sla
+- type: x-sla
+  url: https://aws.amazon.com/route53/sla/
+- type: x-website
+  url: https://aws.amazon.com/route53/
 - type: x-documentation
   url: http://docs.aws.amazon.com/Route53/latest/APIReference/
 - type: x-faq
