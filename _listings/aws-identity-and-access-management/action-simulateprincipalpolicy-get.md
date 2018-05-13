@@ -1,8 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Identity and Access Management API
+  title: AWS Identity and Access Management API Simulate Principal Policy
   version: 1.0.0
+  description: |-
+    Simulate how a set of IAM policies attached to an IAM entity works with a list of
+          API actions and AWS resources to determine the policies' effective permissions.
 schemes:
 - http
 produces:
