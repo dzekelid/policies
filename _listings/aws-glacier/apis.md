@@ -28,24 +28,21 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-glacier/accountid-vaults-vaultname-access-policy-put.md
-- name: Amazon Glacier API Delete  Vault  Access  Policy
-  description: "DescriptionThis operation deletes the access policy associated with
-    the specified vault. The\n\t\t\toperation is eventually consistent&#8212;that
-    is, it might take some time for Amazon Glacier to\n\t\t\tcompletely remove the
-    access policy, and you might still see the effect of the policy\n\t\t\tfor a short
-    time after you send the delete request. This operation is idempotent. You can
-    invoke delete multiple times, even if there is\n\t\t\tno policy associated with
-    the vault. For more information about vault access policies,\n\t\t\tsee Amazon
-    Glacier Access Control with Vault Access Policies.RequestsTo delete the current
-    vault access policy, send an HTTP DELETE request to\n\t\t\tthe URI of the vault's
-    access-policy subresource."
+- name: Amazon Glacier API Get  Vault  Access  Policy
+  description: "DescriptionThis operation retrieves the access-policy subresource
+    set on the\n\t\t\tvault&#8212;for more information on setting this subresource,
+    see Set Vault Access Policy (PUT access-policy). If\n\t\t\tthere is no access
+    policy set on the vault, the operation returns a 404 Not\n\t\t\t\tfound error.
+    For more information about vault access policies, see Amazon Glacier Access Control
+    with Vault Access Policies.RequestsTo return the current vault access policy,
+    send an HTTP GET request to\n\t\t\tthe URI of the vault's access-policy subresource."
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Storage-Content-Delivery_AmazonGlacier.png
   humanURL: https://aws.amazon.com/glacier/
   baseURL: http:://{host}//
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-glacier/accountid-vaults-vaultname-access-policy-delete.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-glacier/accountid-vaults-vaultname-access-policy-get.md
 x-common:
 - type: x-change-log
   url: http://aws.amazon.com/releasenotes/Amazon-Glacier/
