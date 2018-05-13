@@ -1,8 +1,10 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Elastic MapReduce API
+  title: AWS Elastic MapReduce API Put Auto Scaling Policy
   version: 1.0.0
+  description: Creates or updates an automatic scaling policy for a core instance
+    group or task instance group in an Amazon EMR cluster.
 schemes:
 - http
 produces:
