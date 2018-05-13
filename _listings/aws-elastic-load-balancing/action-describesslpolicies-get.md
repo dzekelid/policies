@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Elastic Load Balancing API
+  title: AWS Elastic Load Balancing API Describe S S L Policies
   version: 1.0.0
+  description: Describes the specified policies or all policies used for SSL negotiation.
 schemes:
 - http
 produces:
