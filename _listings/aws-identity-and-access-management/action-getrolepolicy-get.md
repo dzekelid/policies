@@ -1,8 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Identity and Access Management API
+  title: AWS Identity and Access Management API Get Role Policy
   version: 1.0.0
+  description: |-
+    Retrieves the specified inline policy document that is embedded with the specified
+          IAM role.
 schemes:
 - http
 produces:
