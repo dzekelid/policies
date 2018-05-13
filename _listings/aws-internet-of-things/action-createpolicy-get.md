@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Internet of Things API
+  title: AWS Internet of Things API Create Policy
   version: 1.0.0
+  description: Creates an AWS IoT policy.
 schemes:
 - http
 produces:
