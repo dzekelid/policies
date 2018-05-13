@@ -24,15 +24,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-cloudformation/action-setstackpolicy-get.md
-- name: AWS CloudFormation API Get Stack Policy
-  description: Returns the stack policy for a specified stack.
+- name: AWS CloudFormation API Set Stack Policy
+  description: Sets a stack policy for a specified stack.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Management-Tools_AWSCloudFormation.png
   humanURL: https://aws.amazon.com/cloudformation/
   baseURL: http:://{host}//
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-cloudformation/action-getstackpolicy-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-cloudformation/action-setstackpolicy-get.md
 x-common:
 - type: x-command-line-interface
   url: http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html
