@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Lambda API
+  title: AWS Lambda API Get Policy
   version: 1.0.0
+  description: Returns the resource policy associated with the specified Lambda function.
 schemes:
 - http
 produces:
