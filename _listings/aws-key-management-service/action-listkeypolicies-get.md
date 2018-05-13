@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Key Management Service API
+  title: AWS Key Management Service API List Key Policies
   version: 1.0.0
+  description: Retrieves a list of policies attached to a key.
 schemes:
 - http
 produces:
