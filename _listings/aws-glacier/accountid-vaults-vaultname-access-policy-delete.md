@@ -1,8 +1,18 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Glacier API
+  title: Amazon Glacier API Delete  Vault  Access  Policy
   version: 1.0.0
+  description: "DescriptionThis operation deletes the access policy associated with
+    the specified vault. The\n\t\t\toperation is eventually consistent&#8212;that
+    is, it might take some time for Amazon Glacier to\n\t\t\tcompletely remove the
+    access policy, and you might still see the effect of the policy\n\t\t\tfor a short
+    time after you send the delete request. This operation is idempotent. You can
+    invoke delete multiple times, even if there is\n\t\t\tno policy associated with
+    the vault. For more information about vault access policies,\n\t\t\tsee Amazon
+    Glacier Access Control with Vault Access Policies.RequestsTo delete the current
+    vault access policy, send an HTTP DELETE request to\n\t\t\tthe URI of the vault's
+    access-policy subresource."
 schemes:
 - http
 produces:
