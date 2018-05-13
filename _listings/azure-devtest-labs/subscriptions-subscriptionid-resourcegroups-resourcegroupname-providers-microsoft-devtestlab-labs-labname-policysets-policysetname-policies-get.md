@@ -1,8 +1,8 @@
 ---
 swagger: "2.0"
 info:
-  title: DevTestLabsClient
-  description: The DevTest Labs Client.
+  title: Azure DevTest Labs API Policies List
+  description: List policies in a given policy set.
   version: 1.0.0
 host: management.azure.com
 basePath: /
