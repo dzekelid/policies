@@ -33,15 +33,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-auto-scaling/action-executepolicy-get.md
-- name: AWS Auto Scaling API Describe Policies
-  description: Describes the policies for the specified Auto Scaling group.
+- name: AWS Auto Scaling API Describe Termination Policy Types
+  description: Describes the termination policies supported by Auto Scaling.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Compute_AmazonEC2_AutoScaling.png
   humanURL: https://aws.amazon.com/autoscaling/
   baseURL: http:://{host}//
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-auto-scaling/action-describepolicies-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-auto-scaling/action-describeterminationpolicytypes-get.md
 x-common:
 - type: x-articles
   url: http://developer.amazonwebservices.com/connect/kbcategory.jspa?categoryID=100
