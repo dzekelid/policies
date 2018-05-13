@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Auto Scaling API
+  title: AWS Auto Scaling API Execute Policy
   version: 1.0.0
+  description: Executes the specified policy.
 schemes:
 - http
 produces:
