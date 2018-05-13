@@ -31,15 +31,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-key-management-service/action-listkeypolicies-get.md
-- name: AWS Key Management Service API Get Key Policy
-  description: Retrieves a policy attached to the specified key.
+- name: AWS Key Management Service API List Key Policies
+  description: Retrieves a list of policies attached to a key.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/aws-key-management.jpg
   humanURL: https://aws.amazon.com/kms/
   baseURL: http:://{host}//
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-key-management-service/action-getkeypolicy-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-key-management-service/action-listkeypolicies-get.md
 x-common:
 - type: x-command-line-interface
   url: http://docs.aws.amazon.com/cli/latest/reference/kms/index.html
