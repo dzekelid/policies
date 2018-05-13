@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Identity and Access Management API
+  title: AWS Identity and Access Management API Detach Group Policy
   version: 1.0.0
+  description: Removes the specified managed policy from the specified IAM group.
 schemes:
 - http
 produces:
