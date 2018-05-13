@@ -1,8 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Identity and Access Management API
+  title: AWS Identity and Access Management API Put Group Policy
   version: 1.0.0
+  description: |-
+    Adds or updates an inline policy document that is embedded in the specified IAM
+          group.
 schemes:
 - http
 produces:
