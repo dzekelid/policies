@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Auto Scaling API
+  title: AWS Auto Scaling API Describe Termination Policy Types
   version: 1.0.0
+  description: Describes the termination policies supported by Auto Scaling.
 schemes:
 - http
 produces:
