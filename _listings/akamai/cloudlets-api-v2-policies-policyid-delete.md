@@ -1,8 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  title: Akamai Merged API
+  title: Akamai API Remove a Policy
+  description: Remove a Policy
   version: 1.0.0
+host: developer.akamai.com
+basePath: /
 schemes:
 - http
 produces:
@@ -16,7 +19,7 @@ paths:
       description: Remove a Policy
       operationId: cloudletsapiv2policiespolicyid
       parameters:
-      - in: Number
+      - in: query
         name: policyId
         description: The ID of the policy
         type: string
