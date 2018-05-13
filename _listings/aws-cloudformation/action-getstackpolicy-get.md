@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS CloudFormation API
+  title: AWS CloudFormation API Get Stack Policy
   version: 1.0.0
+  description: Returns the stack policy for a specified stack.
 schemes:
 - http
 produces:
