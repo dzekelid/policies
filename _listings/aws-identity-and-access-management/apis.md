@@ -31,18 +31,17 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-identity-and-access-management/action-simulateprincipalpolicy-get.md
-- name: AWS Identity and Access Management API Get Policy
+- name: AWS Identity and Access Management API Get Policy Version
   description: |-
-    Retrieves information about the specified managed policy, including the policy's
-          default version and the total number of IAM users, groups, and roles to which the policy is
-          attached.
+    Retrieves information about the specified version of the specified managed policy,
+          including the policy document.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Security-Identity_AWSIAM.png
   humanURL: https://aws.amazon.com/iam/
   baseURL: http:://{host}//
   tags: Policies
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-identity-and-access-management/action-getpolicy-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-identity-and-access-management/action-getpolicyversion-get.md
 x-common:
 - type: x-change-log
   url: http://developer.amazonwebservices.com/connect/kbcategory.jspa?categoryID=323
