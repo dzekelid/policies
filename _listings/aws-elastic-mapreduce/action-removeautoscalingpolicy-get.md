@@ -1,8 +1,10 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Elastic MapReduce API
+  title: AWS Elastic MapReduce API Remove Auto Scaling Policy
   version: 1.0.0
+  description: Removes an automatic scaling policy from a specified instance group
+    within an EMR cluster.
 schemes:
 - http
 produces:
