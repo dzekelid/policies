@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Internet of Things API
+  title: AWS Internet of Things API Detach Principal Policy
   version: 1.0.0
+  description: Removes the specified policy from the specified certificate.
 schemes:
 - http
 produces:
