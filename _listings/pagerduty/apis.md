@@ -5,10 +5,10 @@ description: See how PagerDuty Digital Operations Management Platform integrates
   data & human intelligence to improve visibility & agility across organizations.
 image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/632-pagerduty.jpg
 x-kinRank: "8"
-x-alexaRank: "19574"
+x-alexaRank: "18918"
 tags: Policies
-created: "2018-06-20"
-modified: "2018-06-20"
+created: "2018-06-25"
+modified: "2018-06-25"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/pagerduty/apis.md
 specificationVersion: "0.14"
 apis:
@@ -16,7 +16,7 @@ apis:
   x-api-slug: pagerduty
   description: List all of the existing escalation policies.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/632-pagerduty.jpg
-  humanURL: http://www.pagerduty.com
+  humanURL: http://www.pagerduty.com/
   baseURL: https://///escalation_policies
   tags: Escalation Policies
   properties:
@@ -27,7 +27,7 @@ apis:
   description: Creates a new escalation policy. There must be at least one existing
     escalation rule added to create a new escalation policy.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/632-pagerduty.jpg
-  humanURL: http://www.pagerduty.com
+  humanURL: http://www.pagerduty.com/
   baseURL: https://///escalation_policies
   tags: Escalation Policies
   properties:
@@ -37,7 +37,7 @@ apis:
   x-api-slug: pagerduty
   description: Get information about an existing escalation policy and its rules.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/632-pagerduty.jpg
-  humanURL: http://www.pagerduty.com
+  humanURL: http://www.pagerduty.com/
   baseURL: https://///escalation_policies/{id}
   tags: Escalation Policies
   properties:
@@ -48,7 +48,7 @@ apis:
   description: Deletes an existing escalation policy and rules. The escalation policy
     must not be in use by any services.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/632-pagerduty.jpg
-  humanURL: http://www.pagerduty.com
+  humanURL: http://www.pagerduty.com/
   baseURL: https://///escalation_policies/{id}
   tags: Escalation Policies
   properties:
@@ -58,7 +58,7 @@ apis:
   x-api-slug: pagerduty
   description: Updates an existing escalation policy and rules.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/632-pagerduty.jpg
-  humanURL: http://www.pagerduty.com
+  humanURL: http://www.pagerduty.com/
   baseURL: https://///escalation_policies/{id}
   tags: Escalation Policies
   properties:
@@ -68,7 +68,7 @@ apis:
   x-api-slug: pagerduty
   description: Delete teams  escalation policies escalation policy
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/632-pagerduty.jpg
-  humanURL: http://www.pagerduty.com
+  humanURL: http://www.pagerduty.com/
   baseURL: https://///teams/{id}/escalation_policies/{escalation_policy_id}
   tags: Team Escalation Policies
   properties:
@@ -78,7 +78,7 @@ apis:
   x-api-slug: pagerduty
   description: Put teams  escalation policies escalation policy
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/632-pagerduty.jpg
-  humanURL: http://www.pagerduty.com
+  humanURL: http://www.pagerduty.com/
   baseURL: https://///teams/{id}/escalation_policies/{escalation_policy_id}
   tags: Team Escalation Policies
   properties:
@@ -89,13 +89,15 @@ apis:
   description: See how PagerDuty Digital Operations Management Platform integrates
     machine data & human intelligence to improve visibility & agility across organizations.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/632-pagerduty.jpg
-  humanURL: http://www.pagerduty.com
+  humanURL: http://www.pagerduty.com/
   baseURL: https:///
   tags: Policies
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/pagerduty/openapi.md
 x-common:
+- type: x-website
+  url: http://www.pagerduty.com/
 - type: x-base
   url: https://acme.pagerduty.com/api/
 - type: x-blog
@@ -116,8 +118,12 @@ x-common:
   url: support@pagerduty.com
 - type: x-email
   url: legal@pagerduty.com
+- type: x-email
+  url: privacy@pagerduty.com
 - type: x-github
   url: https://github.com/PagerDuty
+- type: x-linkedin
+  url: https://www.linkedin.com/company/pagerduty
 - type: x-openapi-spec--authoritative
   url: https://api-reference.pagerduty.com/output.json
 - type: x-pricing
