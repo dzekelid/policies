@@ -12,48 +12,49 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "10"
 x-alexaRank: "0"
 tags: Policies
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-28"
+modified: "2018-08-28"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-key-management-service/apis.md
 specificationVersion: "0.14"
 apis:
-- name: AWS Key Management Service API Get Key Policy
-  x-api-slug: aws-key-management-service-api
-  description: Retrieves a policy attached to the specified key.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/aws-key-management.jpg
-  humanURL: https://aws.amazon.com/kms/
-  baseURL: ://///?Action=GetKeyPolicy
-  tags: Key Policies
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-key-management-service/actiongetkeypolicy-get-openapi.md
-- name: AWS Key Management Service API List Key Policies
-  x-api-slug: aws-key-management-service-api
+- name: AWS Key Management Service API - List Key Policies
+  x-api-slug: actionlistkeypolicies-get
   description: Retrieves a list of policies attached to a key.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/aws-key-management.jpg
   humanURL: https://aws.amazon.com/kms/
-  baseURL: ://///?Action=ListKeyPolicies
-  tags: Policies
+  baseURL: :///
+  tags: Amazon Web Services, Encryption, Security, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-key-management-service/actionlistkeypolicies-get-openapi.md
-- name: AWS Key Management Service API
-  x-api-slug: aws-key-management-service-api
-  description: AWS Key Management Service (KMS) is a managed service that makes it
-    easy for you to create and control the encryption keys used to encrypt your data,
-    and uses Hardware Security Modules (HSMs) to protect the security of your keys.
-    AWS Key Management Service is integrated with several other AWS services to help
-    you protect the data you store with these services. AWS Key Management Service
-    is also integrated with AWS CloudTrail to provide you with logs of all key usage
-    to help meet your regulatory and compliance needs.
+- name: AWS Key Management Service API - Get Key Policy
+  x-api-slug: actiongetkeypolicy-get
+  description: Retrieves a policy attached to the specified key.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/aws-key-management.jpg
   humanURL: https://aws.amazon.com/kms/
   baseURL: :///
-  tags: Policies
+  tags: Amazon Web Services, Encryption, Security, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-key-management-service/openapi.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-key-management-service/actiongetkeypolicy-get-openapi.md
+- name: AWS Key Management Service API - Put Key Policy
+  x-api-slug: actionputkeypolicy-get
+  description: Attaches a key policy to the specified customer master key (CMK).
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/aws-key-management.jpg
+  humanURL: https://aws.amazon.com/kms/
+  baseURL: :///
+  tags: Amazon Web Services, Encryption, Security, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Profiles, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/policies/master/_listings/aws-key-management-service/actionputkeypolicy-get-openapi.md
 x-common:
+- type: x-api-gallery
+  url: http://aws.internet.of.things.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://aws.key.management.service.stack.network
 - type: x-command-line-interface
   url: http://docs.aws.amazon.com/cli/latest/reference/kms/index.html
 - type: x-documentation

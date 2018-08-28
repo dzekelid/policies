@@ -1,4 +1,3 @@
----
 swagger: "2.0"
 x-collection-name: AWS Auto Scaling
 x-complete: 1
@@ -64,24 +63,6 @@ paths:
           description: OK
       tags:
       - Policies
-  /?Action=DescribeTerminationPolicyTypes:
-    get:
-      summary: Describe Termination Policy Types
-      description: Describes the termination policies supported by Auto Scaling.
-      operationId: describeTerminationPolicyTypes
-      x-api-path-slug: actiondescribeterminationpolicytypes-get
-      parameters:
-      - in: query
-        name: TerminationPolicyTypes.member.N
-        description: The termination policies supported by Auto Scaling (OldestInstance,
-          OldestLaunchConfiguration,             NewestInstance, ClosestToNextInstanceHour,
-          and Default)
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Termination Policies
   /?Action=ExecutePolicy:
     get:
       summary: Execute Policy
@@ -115,4 +96,81 @@ paths:
           description: OK
       tags:
       - Policies
----
+  /?Action=DescribeTerminationPolicyTypes:
+    get:
+      summary: Describe Termination Policy Types
+      description: Describes the termination policies supported by Auto Scaling.
+      operationId: describeTerminationPolicyTypes
+      x-api-path-slug: actiondescribeterminationpolicytypes-get
+      parameters:
+      - in: query
+        name: TerminationPolicyTypes.member.N
+        description: The termination policies supported by Auto Scaling (OldestInstance,
+          OldestLaunchConfiguration,             NewestInstance, ClosestToNextInstanceHour,
+          and Default)
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Termination Policies
+  /?Action=PutScalingPolicy:
+    get:
+      summary: Put Scaling Policy
+      description: Creates or updates a policy for an Auto Scaling group.
+      operationId: putScalingPolicy
+      x-api-path-slug: actionputscalingpolicy-get
+      parameters:
+      - in: query
+        name: AdjustmentType
+        description: The adjustment type
+        type: string
+      - in: query
+        name: AutoScalingGroupName
+        description: The name or ARN of the group
+        type: string
+      - in: query
+        name: Cooldown
+        description: The amount of time, in seconds, after a scaling activity completes
+          and before the next scaling activity can start
+        type: string
+      - in: query
+        name: EstimatedInstanceWarmup
+        description: The estimated time, in seconds, until a newly launched instance
+          can contribute to the CloudWatch metrics
+        type: string
+      - in: query
+        name: MetricAggregationType
+        description: The aggregation type for the CloudWatch metrics
+        type: string
+      - in: query
+        name: MinAdjustmentMagnitude
+        description: The minimum number of instances to scale
+        type: string
+      - in: query
+        name: MinAdjustmentStep
+        description: Available for backward compatibility
+        type: string
+      - in: query
+        name: PolicyName
+        description: The name of the policy
+        type: string
+      - in: query
+        name: PolicyType
+        description: The policy type
+        type: string
+      - in: query
+        name: ScalingAdjustment
+        description: The amount by which to scale, based on the specified adjustment
+          type
+        type: string
+      - in: query
+        name: StepAdjustments.member.N
+        description: A set of adjustments that enable you to scale based on the size
+          of the alarm breach
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Scaling Policy

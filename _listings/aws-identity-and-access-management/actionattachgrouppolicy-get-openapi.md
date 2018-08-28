@@ -13,6 +13,358 @@ produces:
 consumes:
 - application/json
 paths:
+  /?Action=CreatePolicy:
+    get:
+      summary: Create Policy
+      description: Creates a new managed policy for your AWS account.
+      operationId: createPolicy
+      x-api-path-slug: actioncreatepolicy-get
+      parameters:
+      - in: query
+        name: Description
+        description: A friendly description of the policy
+        type: string
+      - in: query
+        name: Path
+        description: The path for the policy
+        type: string
+      - in: query
+        name: PolicyDocument
+        description: The JSON policy document that you want to use as the content
+          for the new      policy
+        type: string
+      - in: query
+        name: PolicyName
+        description: The friendly name of the policy
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Policies
+  /?Action=CreatePolicyVersion:
+    get:
+      summary: Create Policy Version
+      description: Creates a new version of the specified managed policy.
+      operationId: createPolicyVersion
+      x-api-path-slug: actioncreatepolicyversion-get
+      parameters:
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the IAM policy to which you
+          want to add a new      version
+        type: string
+      - in: query
+        name: PolicyDocument
+        description: The JSON policy document that you want to use as the content
+          for this new version of      the policy
+        type: string
+      - in: query
+        name: SetAsDefault
+        description: Specifies whether to set this version as the policys default
+          version
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Policies
+  /?Action=DeletePolicy:
+    get:
+      summary: Delete Policy
+      description: Deletes the specified managed policy.
+      operationId: deletePolicy
+      x-api-path-slug: actiondeletepolicy-get
+      parameters:
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the IAM policy you want to
+          delete
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Policies
+  /?Action=DeletePolicyVersion:
+    get:
+      summary: Delete Policy Version
+      description: Deletes the specified version from the specified managed policy.
+      operationId: deletePolicyVersion
+      x-api-path-slug: actiondeletepolicyversion-get
+      parameters:
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the IAM policy from which you
+          want to delete a      version
+        type: string
+      - in: query
+        name: VersionId
+        description: The policy version to delete
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Policies
+  /?Action=GetPolicy:
+    get:
+      summary: Get Policy
+      description: |-
+        Retrieves information about the specified managed policy, including the policy's
+              default version and the total number of IAM users, groups, and roles to which the policy is
+              attached.
+      operationId: getPolicy
+      x-api-path-slug: actiongetpolicy-get
+      parameters:
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the managed policy that you
+          want information      about
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Policies
+  /?Action=GetPolicyVersion:
+    get:
+      summary: Get Policy Version
+      description: |-
+        Retrieves information about the specified version of the specified managed policy,
+              including the policy document.
+      operationId: getPolicyVersion
+      x-api-path-slug: actiongetpolicyversion-get
+      parameters:
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the managed policy that you
+          want information      about
+        type: string
+      - in: query
+        name: VersionId
+        description: Identifies the policy version to retrieve
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Policies
+  /?Action=ListAttachedGroupPolicies:
+    get:
+      summary: List Attached Group Policies
+      description: Lists all managed policies that are attached to the specified IAM
+        group.
+      operationId: listAttachedGroupPolicies
+      x-api-path-slug: actionlistattachedgrouppolicies-get
+      parameters:
+      - in: query
+        name: GroupName
+        description: The name (friendly name, not ARN) of the group to list attached
+          policies for
+        type: string
+      - in: query
+        name: Marker
+        description: Use this parameter only when paginating results and only after     you
+          receive a response indicating that the results are truncated
+        type: string
+      - in: query
+        name: MaxItems
+        description: (Optional) Use this only when paginating results to indicate
+          the     maximum number of items you want in the response
+        type: string
+      - in: query
+        name: PathPrefix
+        description: The path prefix for filtering the results
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Attached Group Policies
+  /?Action=ListAttachedRolePolicies:
+    get:
+      summary: List Attached Role Policies
+      description: Lists all managed policies that are attached to the specified IAM
+        role.
+      operationId: listAttachedRolePolicies
+      x-api-path-slug: actionlistattachedrolepolicies-get
+      parameters:
+      - in: query
+        name: Marker
+        description: Use this parameter only when paginating results and only after     you
+          receive a response indicating that the results are truncated
+        type: string
+      - in: query
+        name: MaxItems
+        description: (Optional) Use this only when paginating results to indicate
+          the     maximum number of items you want in the response
+        type: string
+      - in: query
+        name: PathPrefix
+        description: The path prefix for filtering the results
+        type: string
+      - in: query
+        name: RoleName
+        description: The name (friendly name, not ARN) of the role to list attached
+          policies for
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Attached Role Policies
+  /?Action=ListAttachedUserPolicies:
+    get:
+      summary: List Attached User Policies
+      description: Lists all managed policies that are attached to the specified IAM
+        user.
+      operationId: listAttachedUserPolicies
+      x-api-path-slug: actionlistattacheduserpolicies-get
+      parameters:
+      - in: query
+        name: Marker
+        description: Use this parameter only when paginating results and only after     you
+          receive a response indicating that the results are truncated
+        type: string
+      - in: query
+        name: MaxItems
+        description: (Optional) Use this only when paginating results to indicate
+          the     maximum number of items you want in the response
+        type: string
+      - in: query
+        name: PathPrefix
+        description: The path prefix for filtering the results
+        type: string
+      - in: query
+        name: UserName
+        description: The name (friendly name, not ARN) of the user to list attached
+          policies for
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Attached Use rPolicies
+  /?Action=ListGroupPolicies:
+    get:
+      summary: List Group Policies
+      description: |-
+        Lists the names of the inline policies that are embedded in the specified IAM
+              group.
+      operationId: listGroupPolicies
+      x-api-path-slug: actionlistgrouppolicies-get
+      parameters:
+      - in: query
+        name: GroupName
+        description: The name of the group to list policies for
+        type: string
+      - in: query
+        name: Marker
+        description: Use this parameter only when paginating results and only after     you
+          receive a response indicating that the results are truncated
+        type: string
+      - in: query
+        name: MaxItems
+        description: (Optional) Use this only when paginating results to indicate
+          the     maximum number of items you want in the response
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Group Policies
+  /?Action=ListPolicies:
+    get:
+      summary: List Policies
+      description: |-
+        Lists all the managed policies that are available in your AWS account, including your
+              own customer-defined managed policies and all AWS managed policies.
+      operationId: listPolicies
+      x-api-path-slug: actionlistpolicies-get
+      parameters:
+      - in: query
+        name: Marker
+        description: Use this parameter only when paginating results and only after     you
+          receive a response indicating that the results are truncated
+        type: string
+      - in: query
+        name: MaxItems
+        description: (Optional) Use this only when paginating results to indicate
+          the     maximum number of items you want in the response
+        type: string
+      - in: query
+        name: OnlyAttached
+        description: A flag to filter the results to only the attached policies
+        type: string
+      - in: query
+        name: PathPrefix
+        description: The path prefix for filtering the results
+        type: string
+      - in: query
+        name: Scope
+        description: The scope to use for filtering the results
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - listPolicies
+  /?Action=ListRolePolicies:
+    get:
+      summary: List Role Policies
+      description: |-
+        Lists the names of the inline policies that are embedded in the specified IAM
+              role.
+      operationId: listRolePolicies
+      x-api-path-slug: actionlistrolepolicies-get
+      parameters:
+      - in: query
+        name: Marker
+        description: Use this parameter only when paginating results and only after     you
+          receive a response indicating that the results are truncated
+        type: string
+      - in: query
+        name: MaxItems
+        description: (Optional) Use this only when paginating results to indicate
+          the     maximum number of items you want in the response
+        type: string
+      - in: query
+        name: RoleName
+        description: The name of the role to list policies for
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Role Policies
+  /?Action=ListUserPolicies:
+    get:
+      summary: List User Policies
+      description: Lists the names of the inline policies embedded in the specified
+        IAM user.
+      operationId: listUserPolicies
+      x-api-path-slug: actionlistuserpolicies-get
+      parameters:
+      - in: query
+        name: Marker
+        description: Use this parameter only when paginating results and only after     you
+          receive a response indicating that the results are truncated
+        type: string
+      - in: query
+        name: MaxItems
+        description: (Optional) Use this only when paginating results to indicate
+          the     maximum number of items you want in the response
+        type: string
+      - in: query
+        name: UserName
+        description: The name of the user to list policies for
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - User Policies
   /?Action=AttachGroupPolicy:
     get:
       summary: Attach Group Policy

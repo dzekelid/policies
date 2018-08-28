@@ -13,26 +13,6 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=GetKeyPolicy:
-    get:
-      summary: Get Key Policy
-      description: Retrieves a policy attached to the specified key.
-      operationId: getKeyPolicy
-      x-api-path-slug: actiongetkeypolicy-get
-      parameters:
-      - in: query
-        name: KeyId
-        description: A unique identifier for the customer master key
-        type: string
-      - in: query
-        name: PolicyName
-        description: String that contains the name of the policy
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Key Policies
   /?Action=ListKeyPolicies:
     get:
       summary: List Key Policies

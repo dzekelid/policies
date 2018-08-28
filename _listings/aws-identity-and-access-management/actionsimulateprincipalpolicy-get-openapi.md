@@ -15,72 +15,6 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=AttachGroupPolicy:
-    get:
-      summary: Attach Group Policy
-      description: Attaches the specified managed policy to the specified IAM group.
-      operationId: attachGroupPolicy
-      x-api-path-slug: actionattachgrouppolicy-get
-      parameters:
-      - in: query
-        name: GroupName
-        description: The name (friendly name, not ARN) of the group to attach the
-          policy to
-        type: string
-      - in: query
-        name: PolicyArn
-        description: The Amazon Resource Name (ARN) of the IAM policy you want to
-          attach
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Group Policies
-  /?Action=AttachRolePolicy:
-    get:
-      summary: Attach Role Policy
-      description: Attaches the specified managed policy to the specified IAM role.
-      operationId: attachRolePolicy
-      x-api-path-slug: actionattachrolepolicy-get
-      parameters:
-      - in: query
-        name: PolicyArn
-        description: The Amazon Resource Name (ARN) of the IAM policy you want to
-          attach
-        type: string
-      - in: query
-        name: RoleName
-        description: The name (friendly name, not ARN) of the role to attach the policy
-          to
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Role Policies
-  /?Action=AttachUserPolicy:
-    get:
-      summary: Attach User Policy
-      description: Attaches the specified managed policy to the specified user.
-      operationId: attachUserPolicy
-      x-api-path-slug: actionattachuserpolicy-get
-      parameters:
-      - in: query
-        name: PolicyArn
-        description: The Amazon Resource Name (ARN) of the IAM policy you want to
-          attach
-        type: string
-      - in: query
-        name: UserName
-        description: The name (friendly name, not ARN) of the IAM user to attach the
-          policy to
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - User Policies
   /?Action=CreatePolicy:
     get:
       summary: Create Policy
@@ -137,56 +71,6 @@ paths:
           description: OK
       tags:
       - Policies
-  /?Action=DeleteAccountPasswordPolicy:
-    get:
-      summary: Delete Account Password Policy
-      description: Deletes the password policy for the AWS account.
-      operationId: deleteAccountPasswordPolicy
-      x-api-path-slug: actiondeleteaccountpasswordpolicy-get
-      parameters:
-      - in: query
-        name: LimitExceeded
-        description: The request was rejected because it attempted to create resources
-          beyond the current      AWS account limits
-        type: string
-      - in: query
-        name: NoSuchEntity
-        description: The request was rejected because it referenced an entity that
-          does not exist
-        type: string
-      - in: query
-        name: ServiceFailure
-        description: The request processing has failed because of an unknown error,
-          exception or      failure
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Account Password Policies
-  /?Action=DeleteGroupPolicy:
-    get:
-      summary: Delete Group Policy
-      description: |-
-        Deletes the specified inline policy that is embedded in the specified IAM
-              group.
-      operationId: deleteGroupPolicy
-      x-api-path-slug: actiondeletegrouppolicy-get
-      parameters:
-      - in: query
-        name: GroupName
-        description: The name (friendly name, not ARN) identifying the group that
-          the policy is embedded      in
-        type: string
-      - in: query
-        name: PolicyName
-        description: The name identifying the policy document to delete
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Group Policies
   /?Action=DeletePolicy:
     get:
       summary: Delete Policy
@@ -225,183 +109,6 @@ paths:
           description: OK
       tags:
       - Policies
-  /?Action=DeleteRolePolicy:
-    get:
-      summary: Delete Role Policy
-      description: |-
-        Deletes the specified inline policy that is embedded in the specified IAM
-              role.
-      operationId: deleteRolePolicy
-      x-api-path-slug: actiondeleterolepolicy-get
-      parameters:
-      - in: query
-        name: PolicyName
-        description: The name of the inline policy to delete from the specified IAM
-          role
-        type: string
-      - in: query
-        name: RoleName
-        description: The name (friendly name, not ARN) identifying the role that the
-          policy is embedded      in
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Role Policies
-  /?Action=DeleteUserPolicy:
-    get:
-      summary: Delete User Policy
-      description: |-
-        Deletes the specified inline policy that is embedded in the specified IAM
-              user.
-      operationId: deleteUserPolicy
-      x-api-path-slug: actiondeleteuserpolicy-get
-      parameters:
-      - in: query
-        name: PolicyName
-        description: The name identifying the policy document to delete
-        type: string
-      - in: query
-        name: UserName
-        description: The name (friendly name, not ARN) identifying the user that the
-          policy is embedded      in
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - User Policies
-  /?Action=DetachGroupPolicy:
-    get:
-      summary: Detach Group Policy
-      description: Removes the specified managed policy from the specified IAM group.
-      operationId: detachGroupPolicy
-      x-api-path-slug: actiondetachgrouppolicy-get
-      parameters:
-      - in: query
-        name: GroupName
-        description: The name (friendly name, not ARN) of the IAM group to detach
-          the policy      from
-        type: string
-      - in: query
-        name: PolicyArn
-        description: The Amazon Resource Name (ARN) of the IAM policy you want to
-          detach
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Group Policies
-  /?Action=DetachRolePolicy:
-    get:
-      summary: Detach Role Policy
-      description: Removes the specified managed policy from the specified role.
-      operationId: detachRolePolicy
-      x-api-path-slug: actiondetachrolepolicy-get
-      parameters:
-      - in: query
-        name: PolicyArn
-        description: The Amazon Resource Name (ARN) of the IAM policy you want to
-          detach
-        type: string
-      - in: query
-        name: RoleName
-        description: The name (friendly name, not ARN) of the IAM role to detach the
-          policy      from
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Role Policies
-  /?Action=DetachUserPolicy:
-    get:
-      summary: Detach User Policy
-      description: Removes the specified managed policy from the specified user.
-      operationId: detachUserPolicy
-      x-api-path-slug: actiondetachuserpolicy-get
-      parameters:
-      - in: query
-        name: PolicyArn
-        description: The Amazon Resource Name (ARN) of the IAM policy you want to
-          detach
-        type: string
-      - in: query
-        name: UserName
-        description: The name (friendly name, not ARN) of the IAM user to detach the
-          policy      from
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - User Policies
-  /?Action=GetContextKeysForCustomPolicy:
-    get:
-      summary: Get Context Keys For Custom Policy
-      description: Gets a list of all of the context keys referenced in the input
-        policies.
-      operationId: getContextKeysForCustomPolicy
-      x-api-path-slug: actiongetcontextkeysforcustompolicy-get
-      parameters:
-      - in: query
-        name: PolicyInputList.member.N
-        description: A list of policies for which you want the list of context keys
-          referenced in those      policies
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Context Keys For Custom Policies
-  /?Action=GetContextKeysForPrincipalPolicy:
-    get:
-      summary: Get Context Keys For Principal Policy
-      description: |-
-        Gets a list of all of the context keys referenced in all of the IAM policies attached
-              to the specified IAM entity.
-      operationId: getContextKeysForPrincipalPolicy
-      x-api-path-slug: actiongetcontextkeysforprincipalpolicy-get
-      parameters:
-      - in: query
-        name: PolicyInputList.member.N
-        description: An optional list of additional policies for which you want the
-          list of context keys      that are referenced
-        type: string
-      - in: query
-        name: PolicySourceArn
-        description: The ARN of a user, group, or role whose policies contain the
-          context keys that you want      listed
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Context Keys For Principal Policies
-  /?Action=GetGroupPolicy:
-    get:
-      summary: Get Group Policy
-      description: |-
-        Retrieves the specified inline policy document that is embedded in the specified IAM
-              group.
-      operationId: getGroupPolicy
-      x-api-path-slug: actiongetgrouppolicy-get
-      parameters:
-      - in: query
-        name: GroupName
-        description: The name of the group the policy is associated with
-        type: string
-      - in: query
-        name: PolicyName
-        description: The name of the policy document to get
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Group Policies
   /?Action=GetPolicy:
     get:
       summary: Get Policy
@@ -445,50 +152,6 @@ paths:
           description: OK
       tags:
       - Policies
-  /?Action=GetRolePolicy:
-    get:
-      summary: Get Role Policy
-      description: |-
-        Retrieves the specified inline policy document that is embedded with the specified
-              IAM role.
-      operationId: getRolePolicy
-      x-api-path-slug: actiongetrolepolicy-get
-      parameters:
-      - in: query
-        name: PolicyName
-        description: The name of the policy document to get
-        type: string
-      - in: query
-        name: RoleName
-        description: The name of the role associated with the policy
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Role Policies
-  /?Action=GetUserPolicy:
-    get:
-      summary: Get User Policy
-      description: |-
-        Retrieves the specified inline policy document that is embedded in the specified IAM
-              user.
-      operationId: getUserPolicy
-      x-api-path-slug: actiongetuserpolicy-get
-      parameters:
-      - in: query
-        name: PolicyName
-        description: The name of the policy document to get
-        type: string
-      - in: query
-        name: UserName
-        description: The name of the user who the policy is associated with
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - User Policies
   /?Action=ListAttachedGroupPolicies:
     get:
       summary: List Attached Group Policies
@@ -585,43 +248,6 @@ paths:
           description: OK
       tags:
       - Attached Use rPolicies
-  /?Action=ListEntitiesForPolicy:
-    get:
-      summary: List Entities For Policy
-      description: |-
-        Lists all IAM users, groups, and roles that the specified managed policy is attached
-              to.
-      operationId: listEntitiesForPolicy
-      x-api-path-slug: actionlistentitiesforpolicy-get
-      parameters:
-      - in: query
-        name: EntityFilter
-        description: The entity type to use for filtering the results
-        type: string
-      - in: query
-        name: Marker
-        description: Use this parameter only when paginating results and only after     you
-          receive a response indicating that the results are truncated
-        type: string
-      - in: query
-        name: MaxItems
-        description: (Optional) Use this only when paginating results to indicate
-          the     maximum number of items you want in the response
-        type: string
-      - in: query
-        name: PathPrefix
-        description: The path prefix for filtering the results
-        type: string
-      - in: query
-        name: PolicyArn
-        description: The Amazon Resource Name (ARN) of the IAM policy for which you
-          want the      versions
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Entities For Policies
   /?Action=ListGroupPolicies:
     get:
       summary: List Group Policies
@@ -741,6 +367,425 @@ paths:
           description: OK
       tags:
       - User Policies
+  /?Action=AttachGroupPolicy:
+    get:
+      summary: Attach Group Policy
+      description: Attaches the specified managed policy to the specified IAM group.
+      operationId: attachGroupPolicy
+      x-api-path-slug: actionattachgrouppolicy-get
+      parameters:
+      - in: query
+        name: GroupName
+        description: The name (friendly name, not ARN) of the group to attach the
+          policy to
+        type: string
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the IAM policy you want to
+          attach
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Group Policies
+  /?Action=AttachRolePolicy:
+    get:
+      summary: Attach Role Policy
+      description: Attaches the specified managed policy to the specified IAM role.
+      operationId: attachRolePolicy
+      x-api-path-slug: actionattachrolepolicy-get
+      parameters:
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the IAM policy you want to
+          attach
+        type: string
+      - in: query
+        name: RoleName
+        description: The name (friendly name, not ARN) of the role to attach the policy
+          to
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Role Policies
+  /?Action=AttachUserPolicy:
+    get:
+      summary: Attach User Policy
+      description: Attaches the specified managed policy to the specified user.
+      operationId: attachUserPolicy
+      x-api-path-slug: actionattachuserpolicy-get
+      parameters:
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the IAM policy you want to
+          attach
+        type: string
+      - in: query
+        name: UserName
+        description: The name (friendly name, not ARN) of the IAM user to attach the
+          policy to
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - User Policies
+  /?Action=DeleteAccountPasswordPolicy:
+    get:
+      summary: Delete Account Password Policy
+      description: Deletes the password policy for the AWS account.
+      operationId: deleteAccountPasswordPolicy
+      x-api-path-slug: actiondeleteaccountpasswordpolicy-get
+      parameters:
+      - in: query
+        name: LimitExceeded
+        description: The request was rejected because it attempted to create resources
+          beyond the current      AWS account limits
+        type: string
+      - in: query
+        name: NoSuchEntity
+        description: The request was rejected because it referenced an entity that
+          does not exist
+        type: string
+      - in: query
+        name: ServiceFailure
+        description: The request processing has failed because of an unknown error,
+          exception or      failure
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Account Password Policies
+  /?Action=DeleteGroupPolicy:
+    get:
+      summary: Delete Group Policy
+      description: |-
+        Deletes the specified inline policy that is embedded in the specified IAM
+              group.
+      operationId: deleteGroupPolicy
+      x-api-path-slug: actiondeletegrouppolicy-get
+      parameters:
+      - in: query
+        name: GroupName
+        description: The name (friendly name, not ARN) identifying the group that
+          the policy is embedded      in
+        type: string
+      - in: query
+        name: PolicyName
+        description: The name identifying the policy document to delete
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Group Policies
+  /?Action=DeleteRolePolicy:
+    get:
+      summary: Delete Role Policy
+      description: |-
+        Deletes the specified inline policy that is embedded in the specified IAM
+              role.
+      operationId: deleteRolePolicy
+      x-api-path-slug: actiondeleterolepolicy-get
+      parameters:
+      - in: query
+        name: PolicyName
+        description: The name of the inline policy to delete from the specified IAM
+          role
+        type: string
+      - in: query
+        name: RoleName
+        description: The name (friendly name, not ARN) identifying the role that the
+          policy is embedded      in
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Role Policies
+  /?Action=DeleteUserPolicy:
+    get:
+      summary: Delete User Policy
+      description: |-
+        Deletes the specified inline policy that is embedded in the specified IAM
+              user.
+      operationId: deleteUserPolicy
+      x-api-path-slug: actiondeleteuserpolicy-get
+      parameters:
+      - in: query
+        name: PolicyName
+        description: The name identifying the policy document to delete
+        type: string
+      - in: query
+        name: UserName
+        description: The name (friendly name, not ARN) identifying the user that the
+          policy is embedded      in
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - User Policies
+  /?Action=DetachGroupPolicy:
+    get:
+      summary: Detach Group Policy
+      description: Removes the specified managed policy from the specified IAM group.
+      operationId: detachGroupPolicy
+      x-api-path-slug: actiondetachgrouppolicy-get
+      parameters:
+      - in: query
+        name: GroupName
+        description: The name (friendly name, not ARN) of the IAM group to detach
+          the policy      from
+        type: string
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the IAM policy you want to
+          detach
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Group Policies
+  /?Action=DetachRolePolicy:
+    get:
+      summary: Detach Role Policy
+      description: Removes the specified managed policy from the specified role.
+      operationId: detachRolePolicy
+      x-api-path-slug: actiondetachrolepolicy-get
+      parameters:
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the IAM policy you want to
+          detach
+        type: string
+      - in: query
+        name: RoleName
+        description: The name (friendly name, not ARN) of the IAM role to detach the
+          policy      from
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Role Policies
+  /?Action=DetachUserPolicy:
+    get:
+      summary: Detach User Policy
+      description: Removes the specified managed policy from the specified user.
+      operationId: detachUserPolicy
+      x-api-path-slug: actiondetachuserpolicy-get
+      parameters:
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the IAM policy you want to
+          detach
+        type: string
+      - in: query
+        name: UserName
+        description: The name (friendly name, not ARN) of the IAM user to detach the
+          policy      from
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - User Policies
+  /?Action=GetAccountPasswordPolicy:
+    get:
+      summary: Get Account Password Policy
+      description: Retrieves the password policy for the AWS account.
+      operationId: getAccountPasswordPolicy
+      x-api-path-slug: actiongetaccountpasswordpolicy-get
+      parameters:
+      - in: query
+        name: PasswordPolicy
+        description: Contains information about the account password policy
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Accounts
+  /?Action=GetContextKeysForCustomPolicy:
+    get:
+      summary: Get Context Keys For Custom Policy
+      description: Gets a list of all of the context keys referenced in the input
+        policies.
+      operationId: getContextKeysForCustomPolicy
+      x-api-path-slug: actiongetcontextkeysforcustompolicy-get
+      parameters:
+      - in: query
+        name: PolicyInputList.member.N
+        description: A list of policies for which you want the list of context keys
+          referenced in those      policies
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Context Keys For Custom Policies
+  /?Action=GetContextKeysForPrincipalPolicy:
+    get:
+      summary: Get Context Keys For Principal Policy
+      description: |-
+        Gets a list of all of the context keys referenced in all of the IAM policies attached
+              to the specified IAM entity.
+      operationId: getContextKeysForPrincipalPolicy
+      x-api-path-slug: actiongetcontextkeysforprincipalpolicy-get
+      parameters:
+      - in: query
+        name: PolicyInputList.member.N
+        description: An optional list of additional policies for which you want the
+          list of context keys      that are referenced
+        type: string
+      - in: query
+        name: PolicySourceArn
+        description: The ARN of a user, group, or role whose policies contain the
+          context keys that you want      listed
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Context Keys For Principal Policies
+  /?Action=GetGroupPolicy:
+    get:
+      summary: Get Group Policy
+      description: |-
+        Retrieves the specified inline policy document that is embedded in the specified IAM
+              group.
+      operationId: getGroupPolicy
+      x-api-path-slug: actiongetgrouppolicy-get
+      parameters:
+      - in: query
+        name: GroupName
+        description: The name of the group the policy is associated with
+        type: string
+      - in: query
+        name: PolicyName
+        description: The name of the policy document to get
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Group Policies
+  /?Action=GetRolePolicy:
+    get:
+      summary: Get Role Policy
+      description: |-
+        Retrieves the specified inline policy document that is embedded with the specified
+              IAM role.
+      operationId: getRolePolicy
+      x-api-path-slug: actiongetrolepolicy-get
+      parameters:
+      - in: query
+        name: PolicyName
+        description: The name of the policy document to get
+        type: string
+      - in: query
+        name: RoleName
+        description: The name of the role associated with the policy
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Role Policies
+  /?Action=GetUserPolicy:
+    get:
+      summary: Get User Policy
+      description: |-
+        Retrieves the specified inline policy document that is embedded in the specified IAM
+              user.
+      operationId: getUserPolicy
+      x-api-path-slug: actiongetuserpolicy-get
+      parameters:
+      - in: query
+        name: PolicyName
+        description: The name of the policy document to get
+        type: string
+      - in: query
+        name: UserName
+        description: The name of the user who the policy is associated with
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - User Policies
+  /?Action=ListEntitiesForPolicy:
+    get:
+      summary: List Entities For Policy
+      description: |-
+        Lists all IAM users, groups, and roles that the specified managed policy is attached
+              to.
+      operationId: listEntitiesForPolicy
+      x-api-path-slug: actionlistentitiesforpolicy-get
+      parameters:
+      - in: query
+        name: EntityFilter
+        description: The entity type to use for filtering the results
+        type: string
+      - in: query
+        name: Marker
+        description: Use this parameter only when paginating results and only after     you
+          receive a response indicating that the results are truncated
+        type: string
+      - in: query
+        name: MaxItems
+        description: (Optional) Use this only when paginating results to indicate
+          the     maximum number of items you want in the response
+        type: string
+      - in: query
+        name: PathPrefix
+        description: The path prefix for filtering the results
+        type: string
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the IAM policy for which you
+          want the      versions
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Entities For Policies
+  /?Action=ListPolicyVersions:
+    get:
+      summary: List Policy Versions
+      description: |-
+        Lists information about the versions of the specified managed policy, including the
+              version that is currently set as the policy's default version.
+      operationId: listPolicyVersions
+      x-api-path-slug: actionlistpolicyversions-get
+      parameters:
+      - in: query
+        name: Marker
+        description: Use this parameter only when paginating results and only after     you
+          receive a response indicating that the results are truncated
+        type: string
+      - in: query
+        name: MaxItems
+        description: (Optional) Use this only when paginating results to indicate
+          the     maximum number of items you want in the response
+        type: string
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the IAM policy for which you
+          want the      versions
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Policy Versions
   /?Action=PutGroupPolicy:
     get:
       summary: Put Group Policy
@@ -819,6 +864,29 @@ paths:
           description: OK
       tags:
       - Users Policies
+  /?Action=SetDefaultPolicyVersion:
+    get:
+      summary: Set Default Policy Version
+      description: |-
+        Sets the specified version of the specified policy as the policy's default (operative)
+              version.
+      operationId: setDefaultPolicyVersion
+      x-api-path-slug: actionsetdefaultpolicyversion-get
+      parameters:
+      - in: query
+        name: PolicyArn
+        description: The Amazon Resource Name (ARN) of the IAM policy whose default
+          version you want to      set
+        type: string
+      - in: query
+        name: VersionId
+        description: The version of the policy to set as the default (operative) version
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Default Policy Versions
   /?Action=SimulateCustomPolicy:
     get:
       summary: Simulate Custom Policy

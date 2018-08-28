@@ -1,4 +1,3 @@
----
 swagger: "2.0"
 x-collection-name: AWS Internet of Things
 x-complete: 1
@@ -12,28 +11,6 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=AttachPrincipalPolicy:
-    get:
-      summary: Attach Principal Policy
-      description: Attaches the specified policy to the specified principal (certificate
-        or other credential).
-      operationId: attachPrincipalPolicy
-      x-api-path-slug: actionattachprincipalpolicy-get
-      parameters:
-      - in: query
-        name: policyName
-        description: The policy name
-        type: string
-      - in: query
-        name: principal
-        description: The principal, which can be a certificate ARN (as returned from
-          the CreateCertificate operation) or an Amazon Cognito ID
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Principal Policies
   /?Action=CreatePolicy:
     get:
       summary: Create Policy
@@ -114,26 +91,6 @@ paths:
           description: OK
       tags:
       - Policies
-  /?Action=DetachPrincipalPolicy:
-    get:
-      summary: Detach Principal Policy
-      description: Removes the specified policy from the specified certificate.
-      operationId: detachPrincipalPolicy
-      x-api-path-slug: actiondetachprincipalpolicy-get
-      parameters:
-      - in: query
-        name: policyName
-        description: The name of the policy to detach
-        type: string
-      - in: query
-        name: principal
-        description: The principal
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Principal Policies
   /?Action=GetPolicy:
     get:
       summary: Get Policy
@@ -195,6 +152,27 @@ paths:
           description: OK
       tags:
       - Policies
+  /?Action=SetDefaultPolicyVersion:
+    get:
+      summary: Set Default Policy Version
+      description: Sets the specified version of the specified policy as the policy's
+        default (operative) version.
+      operationId: setDefaultPolicyVersion
+      x-api-path-slug: actionsetdefaultpolicyversion-get
+      parameters:
+      - in: query
+        name: policyName
+        description: The policy name
+        type: string
+      - in: query
+        name: policyVersionId
+        description: The policy version ID
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Policies
   /?Action=ListPrincipalPolicies:
     get:
       summary: List Principal Policies
@@ -223,25 +201,90 @@ paths:
           description: OK
       tags:
       - Principal Policies
-  /?Action=SetDefaultPolicyVersion:
+  /?Action=AttachPrincipalPolicy:
     get:
-      summary: Set Default Policy Version
-      description: Sets the specified version of the specified policy as the policy's
-        default (operative) version.
-      operationId: setDefaultPolicyVersion
-      x-api-path-slug: actionsetdefaultpolicyversion-get
+      summary: Attach Principal Policy
+      description: Attaches the specified policy to the specified principal (certificate
+        or other credential).
+      operationId: attachPrincipalPolicy
+      x-api-path-slug: actionattachprincipalpolicy-get
       parameters:
       - in: query
         name: policyName
         description: The policy name
         type: string
       - in: query
-        name: policyVersionId
-        description: The policy version ID
+        name: principal
+        description: The principal, which can be a certificate ARN (as returned from
+          the CreateCertificate operation) or an Amazon Cognito ID
         type: string
       responses:
         200:
           description: OK
       tags:
-      - Policies
----
+      - Principal Policies
+  /?Action=DetachPrincipalPolicy:
+    get:
+      summary: Detach Principal Policy
+      description: Removes the specified policy from the specified certificate.
+      operationId: detachPrincipalPolicy
+      x-api-path-slug: actiondetachprincipalpolicy-get
+      parameters:
+      - in: query
+        name: policyName
+        description: The name of the policy to detach
+        type: string
+      - in: query
+        name: principal
+        description: The principal
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Principal Policies
+  /?Action=ListPolicyPrincipals:
+    get:
+      summary: List Policy Principals
+      description: Lists the principals associated with the specified policy.
+      operationId: listPolicyPrincipals
+      x-api-path-slug: actionlistpolicyprincipals-get
+      parameters:
+      - in: query
+        name: ascendingOrder
+        description: Specifies the order for results
+        type: string
+      - in: query
+        name: marker
+        description: The marker for the next set of results
+        type: string
+      - in: query
+        name: pageSize
+        description: The result page size
+        type: string
+      - in: query
+        name: policyName
+        description: The policy name
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Policy Principals
+  /?Action=ListPolicyVersions:
+    get:
+      summary: List Policy Versions
+      description: Lists the versions of the specified policy and identifies the default
+        version.
+      operationId: listPolicyVersions
+      x-api-path-slug: actionlistpolicyversions-get
+      parameters:
+      - in: query
+        name: policyName
+        description: The policy name
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Policy Versions

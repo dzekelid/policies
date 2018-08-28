@@ -1,10 +1,8 @@
----
 swagger: "2.0"
 x-collection-name: Box
 x-complete: 1
 info:
   title: Box
-  description: the-box-content-api-gives-you-access-to-secure-content-management-and-content-experience-features-for-use-in-your-own-app--it-strives-to-be-restful-and-is-organized-around-the-main-resources-youre-familiar-with-from-the-box-web-interface-
   version: 1.0.0
 host: api.box.com
 basePath: /2.0
@@ -235,4 +233,103 @@ paths:
       - Policies
       - ""
       - Assignments
----
+  /retention_policy_assignments:
+    post:
+      summary: Create Retention Policy Assignment
+      description: Returns a list of all retention policy assignments associated with
+        a specified retention policy.
+      operationId: createRetentionPolicyAssignment
+      x-api-path-slug: retention-policy-assignments-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Documents
+      - Retention
+      - Policy
+      - Assignments
+  /retention_policy_assignments/{RETENTION_POLICY_ASSIGNMENT_ID}:
+    get:
+      summary: Get Retention Policy Assignment
+      description: Used to retrieve information about a retention policy assignment.
+      operationId: getRetentionPolicyAssignment
+      x-api-path-slug: retention-policy-assignmentsretention-policy-assignment-id-get
+      parameters:
+      - in: path
+        name: RETENTION_POLICY_ASSIGNMENT_ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Documents
+      - Retention
+      - Policy
+      - Assignments
+      - Retention
+      - Policy
+      - Assignment
+  /legal_hold_policy_assignments:
+    post:
+      summary: Create New Legal Hold Policy Assignment
+      description: Create a new Assignment, which will apply the Legal Hold Policy
+        to the target of the Assignment.
+      operationId: createLegalHoldPolicyAssignment
+      x-api-path-slug: legal-hold-policy-assignments-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Documents
+      - Legal
+      - Hold
+      - Policy
+      - Assignments
+  /legal_hold_policy_assignments/{ASSIGNMENT_ID}:
+    get:
+      summary: Get Legal Hold Policy Assignment
+      description: Get details of a single assignment.
+      operationId: getLegalHoldPolicyAssignment
+      x-api-path-slug: legal-hold-policy-assignmentsassignment-id-get
+      parameters:
+      - in: path
+        name: ASSIGNMENT_ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Documents
+      - Legal
+      - Hold
+      - Policy
+      - Assignments
+      - Assignment
+    delete:
+      summary: Delete Legal Hold Policy Assignment
+      description: Sends request to delete an existing Assignment. Note that this
+        is an asynchronous process - the Assignment will not be fully deleted yet
+        when the response comes back.
+      operationId: deleteLegalHoldPolicyAssignment
+      x-api-path-slug: legal-hold-policy-assignmentsassignment-id-delete
+      parameters:
+      - in: path
+        name: ASSIGNMENT_ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Documents
+      - Legal
+      - Hold
+      - Policy
+      - Assignments
+      - Assignment

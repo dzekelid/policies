@@ -134,6 +134,206 @@ paths:
       - Policy
       - Oncall
       - User
+  /api-public/v1/profile/{username}/policies:
+    get:
+      summary: Get the user's paging policy
+      description: |-
+        Get all the paging policy steps for the user on the org associated with the API key
+
+        This API may be called a maximum of 15 times per minute.
+      operationId: api_public.v1.profile.username.policies.get
+      x-api-path-slug: apipublicv1profileusernamepolicies-get
+      parameters:
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Profile
+      - Username
+      - Policies
+    post:
+      summary: Create a paging policy step
+      description: |-
+        Create a paging policy step
+
+        This API may be called a maximum of 15 times per minute.
+      operationId: api_public.v1.profile.username.policies.post
+      x-api-path-slug: apipublicv1profileusernamepolicies-post
+      parameters:
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Profile
+      - Username
+      - Policies
+  /api-public/v1/profile/{username}/policies/{step}:
+    get:
+      summary: Get a paging policy step
+      description: |-
+        Get a paging policy step
+
+        This API may be called a maximum of 15 times per minute.
+      operationId: api_public.v1.profile.username.policies.step.get
+      x-api-path-slug: apipublicv1profileusernamepoliciesstep-get
+      parameters:
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Profile
+      - Username
+      - Policies
+      - Step
+    post:
+      summary: Create a rule for a paging policy step
+      description: |-
+        Create a rule for a paging policy step
+
+        This API may be called a maximum of 15 times per minute.
+      operationId: api_public.v1.profile.username.policies.step.post
+      x-api-path-slug: apipublicv1profileusernamepoliciesstep-post
+      parameters:
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Profile
+      - Username
+      - Policies
+      - Step
+    put:
+      summary: Update a paging policy step
+      description: |-
+        Update a paging policy step
+
+        This API may be called a maximum of 15 times per minute.
+      operationId: api_public.v1.profile.username.policies.step.put
+      x-api-path-slug: apipublicv1profileusernamepoliciesstep-put
+      parameters:
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Profile
+      - Username
+      - Policies
+      - Step
+  /api-public/v1/profile/{username}/policies/{step}/{rule}:
+    delete:
+      summary: Delete a rule from a paging policy step
+      description: |-
+        Delete a rule from a paging policy step
+
+        This API may be called a maximum of 15 times per minute.
+      operationId: api_public.v1.profile.username.policies.step.rule.delete
+      x-api-path-slug: apipublicv1profileusernamepoliciessteprule-delete
+      parameters:
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Profile
+      - Username
+      - Policies
+      - Step
+      - Rule
+    get:
+      summary: Get a rule from a paging policy step
+      description: |-
+        Get a rule from a paging policy step
+
+        This API may be called a maximum of 15 times per minute.
+      operationId: api_public.v1.profile.username.policies.step.rule.get
+      x-api-path-slug: apipublicv1profileusernamepoliciessteprule-get
+      parameters:
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Profile
+      - Username
+      - Policies
+      - Step
+      - Rule
+    put:
+      summary: Update a rule for a paging policy step
+      description: |-
+        Update a rule for a paging policy step
+
+        This API may be called a maximum of 15 times per minute.
+      operationId: api_public.v1.profile.username.policies.step.rule.put
+      x-api-path-slug: apipublicv1profileusernamepoliciessteprule-put
+      parameters:
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Profile
+      - Username
+      - Policies
+      - Step
+      - Rule
+  /api-public/v1/team/{team}/policies:
+    get:
+      summary: Retrieve a list of escalation policies for a team
+      description: |-
+        Get the escalation policies for the specified team.
+
+        This API may be called a maximum of 15 times per minute.
+      operationId: api_public.v1.team.team.policies.get
+      x-api-path-slug: apipublicv1teamteampolicies-get
+      parameters:
+      - in: query
+        name: No Name
+      - in: path
+        name: team
+        description: The VictorOps team to fetch
+      responses:
+        200:
+          description: OK
+      tags:
+      - Team
+      - Team
+      - Policies
+  /api-public/v1/user/{user}/policies:
+    get:
+      summary: Get a list of paging policies for a user
+      description: |-
+        Get paging policies for a user
+
+        This API may be called a maximum of 15 times per minute.
+      operationId: api_public.v1.user.user.policies.get
+      x-api-path-slug: apipublicv1useruserpolicies-get
+      parameters:
+      - in: query
+        name: No Name
+      - in: path
+        name: user
+        description: The VictorOps user ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - User
+      - User
+      - Policies
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

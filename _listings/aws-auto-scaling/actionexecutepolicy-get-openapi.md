@@ -65,24 +65,6 @@ paths:
           description: OK
       tags:
       - Policies
-  /?Action=DescribeTerminationPolicyTypes:
-    get:
-      summary: Describe Termination Policy Types
-      description: Describes the termination policies supported by Auto Scaling.
-      operationId: describeTerminationPolicyTypes
-      x-api-path-slug: actiondescribeterminationpolicytypes-get
-      parameters:
-      - in: query
-        name: TerminationPolicyTypes.member.N
-        description: The termination policies supported by Auto Scaling (OldestInstance,
-          OldestLaunchConfiguration,             NewestInstance, ClosestToNextInstanceHour,
-          and Default)
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Termination Policies
   /?Action=ExecutePolicy:
     get:
       summary: Execute Policy
@@ -116,6 +98,24 @@ paths:
           description: OK
       tags:
       - Policies
+  /?Action=DescribeTerminationPolicyTypes:
+    get:
+      summary: Describe Termination Policy Types
+      description: Describes the termination policies supported by Auto Scaling.
+      operationId: describeTerminationPolicyTypes
+      x-api-path-slug: actiondescribeterminationpolicytypes-get
+      parameters:
+      - in: query
+        name: TerminationPolicyTypes.member.N
+        description: The termination policies supported by Auto Scaling (OldestInstance,
+          OldestLaunchConfiguration,             NewestInstance, ClosestToNextInstanceHour,
+          and Default)
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Termination Policies
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

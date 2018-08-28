@@ -13,28 +13,6 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=AttachPrincipalPolicy:
-    get:
-      summary: Attach Principal Policy
-      description: Attaches the specified policy to the specified principal (certificate
-        or other credential).
-      operationId: attachPrincipalPolicy
-      x-api-path-slug: actionattachprincipalpolicy-get
-      parameters:
-      - in: query
-        name: policyName
-        description: The policy name
-        type: string
-      - in: query
-        name: principal
-        description: The principal, which can be a certificate ARN (as returned from
-          the CreateCertificate operation) or an Amazon Cognito ID
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Principal Policies
   /?Action=CreatePolicy:
     get:
       summary: Create Policy
@@ -115,26 +93,6 @@ paths:
           description: OK
       tags:
       - Policies
-  /?Action=DetachPrincipalPolicy:
-    get:
-      summary: Detach Principal Policy
-      description: Removes the specified policy from the specified certificate.
-      operationId: detachPrincipalPolicy
-      x-api-path-slug: actiondetachprincipalpolicy-get
-      parameters:
-      - in: query
-        name: policyName
-        description: The name of the policy to detach
-        type: string
-      - in: query
-        name: principal
-        description: The principal
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Principal Policies
   /?Action=GetPolicy:
     get:
       summary: Get Policy
@@ -190,6 +148,27 @@ paths:
       - in: query
         name: pageSize
         description: The result page size
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Policies
+  /?Action=SetDefaultPolicyVersion:
+    get:
+      summary: Set Default Policy Version
+      description: Sets the specified version of the specified policy as the policy's
+        default (operative) version.
+      operationId: setDefaultPolicyVersion
+      x-api-path-slug: actionsetdefaultpolicyversion-get
+      parameters:
+      - in: query
+        name: policyName
+        description: The policy name
+        type: string
+      - in: query
+        name: policyVersionId
+        description: The policy version ID
         type: string
       responses:
         200:
